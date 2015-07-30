@@ -11,7 +11,7 @@ var Q = thrift.Q;
 var ttypes = require('./order_types');
 //HELPER FUNCTIONS AND STRUCTURES
 
-RpcZaocanOrderService_getOrderListByToken_args = function(args) {
+var RpcZaocanOrderService_getOrderListByToken_args = function(args) {
   this.token = null;
   this.offset = null;
   this.count = null;
@@ -93,7 +93,7 @@ RpcZaocanOrderService_getOrderListByToken_args.prototype.write = function(output
   return;
 };
 
-RpcZaocanOrderService_getOrderListByToken_result = function(args) {
+var RpcZaocanOrderService_getOrderListByToken_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -169,7 +169,7 @@ RpcZaocanOrderService_getOrderListByToken_result.prototype.write = function(outp
   return;
 };
 
-RpcZaocanOrderService_getOrderCountByToken_args = function(args) {
+var RpcZaocanOrderService_getOrderCountByToken_args = function(args) {
   this.token = null;
   if (args) {
     if (args.token !== undefined) {
@@ -222,7 +222,7 @@ RpcZaocanOrderService_getOrderCountByToken_args.prototype.write = function(outpu
   return;
 };
 
-RpcZaocanOrderService_getOrderCountByToken_result = function(args) {
+var RpcZaocanOrderService_getOrderCountByToken_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -275,7 +275,7 @@ RpcZaocanOrderService_getOrderCountByToken_result.prototype.write = function(out
   return;
 };
 
-RpcZaocanOrderServiceClient = exports.Client = function(output, pClass) {
+var RpcZaocanOrderServiceClient = exports.Client = function(output, pClass) {
     this.output = output;
     this.pClass = pClass;
     this._seqid = 0;
@@ -380,7 +380,7 @@ RpcZaocanOrderServiceClient.prototype.recv_getOrderCountByToken = function(input
   }
   return callback('getOrderCountByToken failed: unknown result');
 };
-RpcZaocanOrderServiceProcessor = exports.Processor = function(handler) {
+var RpcZaocanOrderServiceProcessor = exports.Processor = function(handler) {
   this._handler = handler
 }
 RpcZaocanOrderServiceProcessor.prototype.process = function(input, output) {

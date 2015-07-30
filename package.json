@@ -1,6 +1,6 @@
 {
   "name": "thrift-shim",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "fix problems of thrift generated node files",
   "bin": {
     "thriftshim": "bin/cli.js"
@@ -12,9 +12,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "jshint": "^2.7.0"
+    "jshint": "^2.7.0",
+    "mocha": "^2.2.5"
   },
   "scripts": {
-    "lint": "./node_modules/jshint/bin/jshint test/gen-nodejs/"
+    "lint": "./node_modules/jshint/bin/jshint test/gen-nodejs/",
+    "test": "git checkout test/gen-nodejs/; ./bin/cli.js test/gen-nodejs/; ./node_modules/mocha/bin/mocha test/main.js"
   }
 }

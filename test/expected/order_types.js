@@ -9,7 +9,7 @@ var Q = thrift.Q;
 
 
 var ttypes = module.exports = {};
-OrderDigest = module.exports.OrderDigest = function(args) {
+var OrderDigest = module.exports.OrderDigest = function(args) {
   this.id = null;
   this.title = null;
   this.status = null;
