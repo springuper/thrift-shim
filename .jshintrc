@@ -1,0 +1,8 @@
+{
+    "camelcase": false,   
+    "eqeqeq": false,
+    "undef": true,
+    "asi": true,
+    "eqnull": true,
+    "node": true
+}

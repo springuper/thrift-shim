@@ -1,0 +1,20 @@
+{
+  "name": "thrift-shim",
+  "version": "0.0.3",
+  "description": "fix problems of thrift generated node files",
+  "bin": {
+    "thriftshim": "bin/cli.js"
+  },
+  "repository": "https://github.com/springuper/thrift-shim.git",
+  "author": "springuper@gmail.com",
+  "dependencies": {
+    "glob": "^5.0.14"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jshint": "^2.7.0"
+  },
+  "scripts": {
+    "lint": "./node_modules/jshint/bin/jshint test/gen-nodejs/"
+  }
+}
