@@ -7,6 +7,6 @@ Fix problems of thrift generated node files, includes:
 ## Usage
 
 ```
-npm install @mtfe/thrift-shim
+npm install thrift-shim
 ./node_modules/.bin/thriftshim path/to/gen-nodejs/
 ```
